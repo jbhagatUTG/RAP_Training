@@ -1,0 +1,13 @@
+@EndUserText.label: 'Order Service'
+define service ZUI_ORDER {
+  expose ZC_ORDERBO as SalesOrder;
+  expose ZC_ORDERITEMBO as OrderItem;
+  expose ZI_OrderStatus as Status;
+  expose ZI_OrderStatusVH as StatusVH;
+  expose I_CompanyCode as CompanyCode;
+  expose ZI_Product as Product;
+  expose ZI_ProductCategory as ProductCategory;
+  expose ZI_ProductVH as ProductVH;
+  expose I_UnitOfMeasure as UnitofMeasure;
+  expose I_Currency as Currency;
+}

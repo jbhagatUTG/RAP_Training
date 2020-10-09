@@ -1,0 +1,49 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Order Item',
+    typeNamePlural: 'Order Items',
+    title: {
+      type: #STANDARD,
+      label: 'Order Item',
+      value: 'ItemNo'
+    }
+  }
+}
+annotate view ZC_ORDERITEMBO with
+{
+  @UI.hidden: true
+  OrderID;
+  @UI.lineItem: [ {
+  position: 10 ,
+  importance: #HIGH
+  } ]
+  ItemNo;
+  @UI.lineItem: [ {
+  position: 20 ,
+  importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 20
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_ProductVH', element: 'ProductID' } }]
+  ProductID;
+  @UI.lineItem: [ {
+  position: 30 ,
+  importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 30
+  } ]
+  Quantity;
+  @UI.hidden: true
+  BaseUnit;
+  @UI.lineItem: [ {
+  position: 40 ,
+  importance: #HIGH
+  } ]
+  UnitPrice;
+  @UI.hidden: true
+  Currency;
+
+}

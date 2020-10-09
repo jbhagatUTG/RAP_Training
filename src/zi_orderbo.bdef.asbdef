@@ -1,0 +1,24 @@
+unmanaged implementation in class zbp_i_orderbo unique;
+
+define behavior for ZI_ORDERBO alias Order
+late numbering
+//lock master
+//authorization master
+//etag <field_name>
+{
+  create;
+  association _Item { create; }
+
+  action Deliver result [1] $self;
+  action Ship result [1] $self;
+}
+
+define behavior for ZI_ORDERITEMBO alias OrderItem
+late numbering
+//lock dependent( <local_field_name> = <target_field_name> )
+//authorization dependent( <local_field_name> = <target_field_name> )
+//etag <field_name>
+{
+  create;
+
+}

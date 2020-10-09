@@ -1,0 +1,15 @@
+projection;
+
+define behavior for ZC_ORDERBO alias Order
+{
+  use create;
+  use association _ITEM { create; }
+
+  use action Deliver;
+
+}
+
+define behavior for ZC_ORDERITEMBO alias OrderItem
+{
+  use create;
+}
