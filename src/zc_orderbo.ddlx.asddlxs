@@ -65,6 +65,7 @@ annotate view ZC_ORDERBO with
   } ]
   @UI.textArrangement: #TEXT_ONLY
   @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_OrderStatusVH', element: 'Status' } }]
+  @EndUserText.label: 'Order Status'
   OrderStatus;
 
 }
